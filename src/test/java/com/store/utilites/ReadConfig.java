@@ -3,6 +3,7 @@ package com.store.utilites;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -12,11 +13,13 @@ public class ReadConfig {
 	public ReadConfig()  {
 		
 		File f =new File("./Configurations/config.properties");
+
 		
 		try {
-			FileInputStream fis=new FileInputStream(f);
+			InputStream input = ReadConfig.class.getClassLoader().getResourceAsStream("config.properties");
+			//FileInputStream fis=new FileInputStream(f);
 			pro=new Properties();
-			pro.load(fis);
+			pro.load(input);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

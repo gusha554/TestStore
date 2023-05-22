@@ -37,7 +37,7 @@ public class NewCustomerTest extends BaseClass{
 			
 				System.out.println("DataProvidersssss Register");
 				
-				File f=new File((System.getProperty("user.dir")+"\\Datafiles\\Register1.xlsx"));
+				File f=new File((System.getProperty("user.dir")+System.getProperty("file.separator") + "Datafiles" + System.getProperty("file.separator") + "Register1.xlsx"));
 				FileInputStream fi=new FileInputStream(f);
 				System.out.println(fi);
 				 XSSFWorkbook workbook=new XSSFWorkbook(fi);

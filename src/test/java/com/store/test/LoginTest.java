@@ -109,7 +109,7 @@ public class LoginTest extends BaseClass {
 		
 			System.out.println("DataProvidersssss");
 			
-			File f=new File((System.getProperty("user.dir")+"\\Datafiles\\LoginTest1.xlsx"));
+			File f=new File((System.getProperty("user.dir")+System.getProperty("file.separator") + "Datafiles" + System.getProperty("file.separator") + "LoginTest1.xlsx"));
 			FileInputStream fi=new FileInputStream(f);
 			//System.out.println(fi);
 			 XSSFWorkbook workbook=new XSSFWorkbook(fi);
